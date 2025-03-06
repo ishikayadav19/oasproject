@@ -1,0 +1,43 @@
+{% extends 'studentlayout.html' %}
+{% load static %}
+
+{% block student %}
+<div class="container-fluid " style="min-height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Fee Payment</h1></div>
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        {% if vs %}
+
+        <div class="row mt-5">
+            <div class="col-sm-4">
+                <img src="{{stu.pic.url}}" class="img-fluid">
+            </div>
+            <div class="col-sm-8 ps-5">
+                <p class="fs-5 ">Name :  <span class="fw-bold ps-3 ">{{stu.name}}</span></p> <br>
+                <p class="fs-5">Session :  <span class="fw-bold ps-3 ">{{stu.session}}</span></p><br>
+                <p class="fs-5">Course :  <span class="fw-bold ps-3 ">{{stu.course}}</span></p><br>
+                <p class="fs-5">Course Fees :  <span class="fw-bold ps-3 "> &#8377 {{stu.fees}}</span></p>    
+            </div>
+        </div><hr>
+        <div class="row mx-auto text-center">
+            <h3 class="fw-bold" >Scan QR code For Fee Payment</h3>
+
+            <div class="col-md-6 mx-auto mt-2 mb-3">
+                <img  src="{% static 'images/QR.jpg' %}" height="500px">
+            </div>
+        </div>
+        {% endif %}
+        {% if not vs %}
+        <div class="row text-center">
+        <h2 class="text-center mt-5"> Your Document verification is under processing..... <br> Wait for Admin Approval. </h2>
+        <div class="spinner-border mx-auto mt-5" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+</div>
+
+{% endblock %}

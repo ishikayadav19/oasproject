@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Admission System</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+</style>
+
+</head>
+    <body style="background-image:linear-gradient(to right, #bed1ed 0%,#bfebd5) ;">
+    <div class="container-fluid" >
+    <!--header1 start-->
+
+      <div class="row  py-2 text-white text-center fw-bold "  style="background-color: #1551ab; height: 50px;">
+        <div class="col-sm-8 header"><i class="fa-regular fa-clock py-1"></i> &nbsp The Biotech park Is Open From 9:00 am to 7:00 pm</div>
+      
+        <div class="col-sm-4 text-end pt-1">
+          <ul class="smi">
+              <li><i class="fa-brands fa-facebook-f"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-google-play"></i></li>
+          </ul>
+      </div>
+        </div>
+    <!--header1 end-->
+    <!--navbar start-->
+        <div class="row ">
+          <div class="col-sm-12 " style="padding-left: 0px; padding-right: 0px;">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid" style="height: 110px;">
+                    <img src="{% static 'images/Biotechlogo.jpg' %}" height="100px" style="margin-left: 15px;">
+                    <p><span class="text-white " style="font-weight: bolder; margin-left:15px; font-size:23px;">Biotech Park, Lucknow </span>  <br>
+                    <i style="font-size:12px;color: white;margin-left: 15px; font-weight: bold;">Where cutting edge science prospers...</i></p>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse text-end "  id="navbarSupportedContent">
+                    <ul id="list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item " >
+                        <a class="nav-link active text-white " style="font-size: 15px; width:70px;" aria-current="page" href="{% url 'index' %}">Home | </a>
+                      </li>
+                      <li class="nav-item dropdown dropdown1">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"  style="font-size: 15px; width:80px;" data-bs-toggle="dropdown" aria-expanded="false">
+                          The Park 
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'organization' %}">Organization</a></li>
+                          <li><a class="dropdown-item" href="{% url 'biotechpark' %}">Why Biotech Park Lucknow?</a></li>
+                          <li><a class="dropdown-item" href="{% url 'locations' %}">Locations</a></li>
+                          <li><a class="dropdown-item" href="{% url 'certifications' %}">Certification</a></li>
+                          <li><a class="dropdown-item" href="{% url 'ourcollab' %}">Ourr Collaborative</a></li>
+                          <li><a class="dropdown-item" href="{% url 'knowledge' %}">Knowledge Network</a></li>
+                          <li><a class="dropdown-item" href="{% url 'outreach' %}">Outreach Activities</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#"><b>The People</b></a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="{% url 'outreach' %}">CEO</a></li>
+                          <li><a class="dropdown-item" href="{% url 'outreach' %}">Distinguished Science And Members</a></li>
+                          <li><a class="dropdown-item" href="{% url 'outreach' %}">Scientific Staff</a></li>
+                          <li><a class="dropdown-item" href="{% url 'outreach' %}">Administration</a></li>
+                          <li><a class="dropdown-item" href="{% url 'outreach' %}">Technical Support</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="font-size: 15px; width:100px;" aria-expanded="false">
+                         | &nbsp Facilities 
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Services</a></li>
+                          <li><a class="dropdown-item" href="#">Research Park & Labs</a></li>
+                          <li><a class="dropdown-item" href="#">Conference Hall</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="font-size: 15px; width:165px;" aria-expanded="false">
+                          | &nbsp Skill development 
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">HRD Overview</a></li>
+                          <li><a class="dropdown-item" href="#">Training Program and Educational Outreach</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Certificate Courses Approved By Baba Saheb Bhimrao Ambedkar University</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">UP Skill Development Mission Sponsored Program</a></li>
+                          <li><a class="dropdown-item" href="#">Voactional Training</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="font-size: 15px; width:90px;" aria-expanded="false">
+                        |  Business 
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Tenders</a></li>
+                          <li><a class="dropdown-item" href="#">Policy Documents</a></li>
+                          <li><a class="dropdown-item" href="#">Resident Companies</a></li>
+                          <li><a class="dropdown-item" href="#">Biotech Funding</a></li>
+                        </ul>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-white " aria-current="page" style="font-size:15px; width:130px;" href="#">| SucessStories | </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-white " aria-current="page" style="font-size: 15px; width:70px;" href="{% url 'about' %}">About |</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-white " aria-current="page" style="font-size: 15px; width:95px;" href="{% url 'contact' %}">Contact Us</a>
+                      </li>
+
+                    <!--  <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle"  href="{% url 'contact' %}" role="button" data-bs-toggle="dropdown" style=" font-size: 18px;" aria-expanded="false">|  Contact Us
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li ><a class="dropdown-item" href="#" >Training Programs For Students From North-East India</a></li>
+                          <li><a class="dropdown-item" href="#">Training Program</a></li>
+                          <li><a class="dropdown-item" href="#">Services</a></li>
+                          <li><a class="dropdown-item" href="#">General</a></li>
+                          <li class="px-2"><a  class="btn btn-primary" href="{% url 'enquiry' %}"> &nbsp Enquiry </a></li>
+                        </ul>
+                        
+                      </li>-->
+
+                      <li class="nav-item ">
+                        <a class="nav-link btn  active text-white " aria-current="page" style="font-size: 15px; width: 100px; background:  #052756 ;" href="{% url 'login' %}"> Login </a>
+                      </li>
+
+                      
+                      </ul>
+                  </div>
+                </div>
+              </nav>
+
+        </div>
+    </div>
+    <!--navbar end-->
+       <!--main start-->
+    <div class="row" style="min-height:500px;">
+      <div class="col-sm-12">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+    <!--main end-->
+    <!--footer start-->
+        <!-----------------------------------------------------------------------Footer----------------------------------------------------------------------->
+        <!-- footer -->
+                
+      <!--  <div class="row px-0" style=" height: 200px; background-size: contain;  background-repeat: no-repeat; position: relative; margin-top: -140px; border:0px;top:190px;">
+          <div class="col-sm-12 ">
+            <img src="{% static 'images/shape.png' %}" style="margin-left: -33px;" alt="">
+          </div>
+
+        </div>-->
+        <!----------------- footer------------ -->
+        <div class="row mt-3">
+            <div class="col-sm-12 footer-outer" style="
+            background-image: linear-gradient(to right, #052756 50%,#0b6335);
+            color:white; height:auto;">
+                <div class="container-fluid">
+                    <div class="row" style="margin-top: 80px;">
+                        <div class=" col-md-4 ps-5 px-auto text-start p-5 tct">
+                            <h5 class="fw-bold tct">Bio Tech Park Lucknow</h5>
+                            <p class="text-start tct">
+                                Biotech Park
+
+                                Sector G, Jankipuram,
+
+                                Kursi Road, Lucknow - 226021
+
+                                Uttar Pradesh - INDIA
+                            </p>
+                            <p class="text-start mb-0 tct"><i class="fa-solid fa-phone"></i>&nbsp;<span class="fw-bold">Phone</span>:91 522 4012091, 2365050  </p>
+                            <p class="text-start mt-0 tct"><i class="fas fa-envelope"></i>&nbsp;<span class="fw-bold">Email</span>:psceo@biotechpark.org.in</p><p>
+                            </p><p class="text-start mt-0 tct" style="margin-top:-15px !important;"><i class="fas fa-envelope"></i>&nbsp;<span class="fw-bold">Email</span>: services@biotechpark.org.in</p><p>
+                            </p><p class="text-start mt-0 tct" style="margin-top:-15px !important;"><i class="fas fa-envelope"></i>&nbsp;<span class="fw-bold">Email</span>:psceo@biotechpark.org.in</p><p>
+                            </p><p class="text-start mt-0 tct" style="margin-top:-15px !important;"><i class="fas fa-envelope"></i>&nbsp;<span class="fw-bold">Email</span>:trainingprograms@biotechpark.org.in</p><p>
+                                <span class="t1" style="background-color: white; padding:10px; border-radius: 5px; color:black;"><i class="fa-brands fa-instagram"></i></span>
+                                <span class="t1" style="background-color: white; padding:10px; border-radius: 5px; color:black;;"><i class="fa-brands fa-twitter"></i></span>
+                                <span class="t1" style="background-color: white; padding:10px; border-radius: 5px; color:black;;"><i class="fa-brands fa-facebook"></i></span>
+                                <span class="t1" style="background-color: white; padding:10px; border-radius: 5px; color:black;;"><i class="fa-brands fa-linkedin"></i></span>
+                                <span class="t1" style="background-color: white; padding:10px; border-radius: 5px; color:black;;"><i class="fa-brands fa-google"></i></span>
+
+                        </p></div>
+                        <div class="col-6 col-sm-3 col-md-2 footw pt-5">
+                            <h4 class="pb-3 ">Bio-Tech Info</h4>
+                            <ul style="list-style-type: none;">
+
+                                <li style="text-decoration: none ; color:white;"><a style="text-decoration: none; color:white;" href="https://swayam.gov.in/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp; Policies </a></li>
+                                <li><a style="text-decoration: none; color:white;" href="https://nptel.ac.in/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp; Useful Links</a></li>
+                                <li><a style="text-decoration: none; color:white;" href="https://www.mooc.org/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp; Networks</a></li>
+                                <li><a style="text-decoration: none; color:white;" href="https://www.nitttrc.ac.in/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp;Research Park </a></li>
+                                <li><a style="text-decoration: none; color:white;" href="https://www.nitttrc.ac.in/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp;Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-3  footw pt-5">
+                            <h4 class="pb-3">Important Links</h4>
+                            <ul style="list-style-type: none; ">
+                                <li><a style="text-decoration: none; color:white;" href="https://urise.up.gov.in/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp;Tenders</a></li>
+                                <li><a style="text-decoration: none; color:white;" href="https://bteup.ac.in/webapp/defaultnew.aspx" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp; Downloads</a></li>
+                                <li><a style="text-decoration: none; color:white;" href="https://jeecup.admissions.nic.in/" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp; E-Calender</a></li>
+                                <li>
+                                    <a style="text-decoration: none; color:white;" href="https://bteup.ac.in/webapp/home.aspx" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp;Directory</a>
+                                </li>
+                                <li>
+                                    <a style="text-decoration: none; color:white;" href="https://urise.up.gov.in/student/login" target="_blank"><i class="fas fa-external-link-alt"></i> &nbsp;WebMail</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 footw mt-5 pt-4">
+                            <h4 class="pb-3 footw1">Certification</h4>
+                            <img src="{% static 'images/footer.jpg' %}" class="w-100 mb-3" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12  footer-copy p-3 text-center" style="background-color:white; color:black; border:1px dashed black">
+                © Copyright 2024 Designed &amp; Developed By | <a style="text-decoration: none; color:black;" href="http://www.softproindia.in/" target="_blank">
+                    Softpro India Computer Technologies
+                    (P) Ltd.
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------------------------------------------Footer----------------------------------------------------------------------->
+    <!--footer end-->
+    <!--Modal-->
+
+    
+
+
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+</body>
+</html>

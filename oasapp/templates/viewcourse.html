@@ -1,0 +1,45 @@
+{% extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+</head>
+<body>
+    {% block admin %}
+    <div class="container-fluid " style="height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div> 
+    <div class="row mt-4" style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Course Details</h1></div>
+    <table class="table table-bordered border-2 text-center shadow">
+        <thead>
+            <tr class="text-dark" style="font-size: 18px;">
+                <th style="background-color:  #221f33; color: white;">ID</th>
+                <th style="background-color:  #221f33; color: white;">Session</th>
+                <th style="background-color:  #221f33; color: white;">Name</th>
+                <th style="background-color:  #221f33; color: white;">Duration</th>
+                <th style="background-color:  #221f33; color: white;">Fees</th>
+                <th style="background-color:  #221f33; color: white;">Date</th>
+                <th style="background-color:  #221f33; color: white;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for i in vcor %} 
+           <tr style="font-size: 18px;">
+            <td  >{{i.id}}</td>
+            <td>{{i.course_Session}}</td>
+            <td >{{i.course_name}}</td>
+            <td >{{i.course_duration}}</td>
+            <td >{{i.course_fees}}</td>
+            <td >{{i.created_date}}</td>
+            <td  ><a href="{% url 'delcourse' id=i.id %}" class="btn" style="font-size: 20px; "><i class="fa-solid fa-trash-can-arrow-up"></i></a>
+            <a href="{% url 'editcourse' id=i.id %}" class="btn" style="font-size: 20px;"><i class="fa-solid fa-pen-to-square"></i></a>
+            </td>
+           </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+</body>
+</html>

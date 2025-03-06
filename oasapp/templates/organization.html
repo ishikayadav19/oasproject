@@ -1,0 +1,33 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <!--image-->
+<div class="row " style=" background-color: black;" >
+<div class="row mx-auto" style=" height:250px; background-image: url({% static 'images/org.jpg' %}); background-repeat: no-repeat; background-size:cover ; opacity: 60%;">   
+</div>
+<h2 style="color: white; margin-top: -150px; font-size: 50px; font-weight: bolder; opacity: 100%;" class="text-center"> Our Organization</h2>
+
+
+
+<div class="row mx-auto" style="  background-color: white">
+    <div class="col-sm-4" style="height: 500px; margin-left: 200px;" >
+        <img src="{%  static 'images/org2.jpeg' %}" width="650px" height="500px">
+    </div>
+    <div class="col-sm-4" style="margin-left: 60px; margin-top: 50px;">
+        <h2 style="font-weight: bolder;">About Organization</h2>
+        <hr>
+        <p style="font-size: 16px;text-align: justify;">
+            The Biotechnology Park in Lucknow, known as the City of Nawabs, has transformed into a leading Biotechnology City in North India. Established in 2002 through a partnership between the Department of Biotechnology, Government of India, and the Department of Science and Technology, Government of Uttar Pradesh, it became fully operational by 2007. Registered under the Indian Societies Act of 1868, the park operates under a robust governance framework ensuring efficiency, transparency, and accountability. Located strategically in Lucknow, renowned for its cultural heritage and administrative significance, the park is a hub for biotechnology-driven enterprises. It catalyzes advancements in agriculture, healthcare, and industrial applications through cutting-edge facilities. By facilitating collaboration among academia, industry, and government, it promotes innovation, technology transfer, and skill development in biotechnology. Beyond economic growth, the park fosters social development by creating employment opportunities, promoting sustainable practices, and enhancing India's global biotechnology leadership. With state-of-the-art infrastructure and a commitment to excellence, Biotech Park, Lucknow, continues to drive forward as a pivotal player in India's biotech sector.
+        </p>
+    </div>
+    <div class="col-sm-2"></div>
+    
+</div>
+
+</div>
+
+
+
+
+
+{% endblock %}

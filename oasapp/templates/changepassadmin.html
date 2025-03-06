@@ -1,0 +1,27 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+{% block admin %}
+<div class="container-fluid " style="height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;">Change Password</h1></div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form action="{% url 'changesaveadmin' %}" method="post">
+                {% csrf_token %}
+                {% if msg %}
+                    <div class="alert alert-danger" role="alert">{{msg}}</div>
+                {% endif %}
+                <p class="fs-5 fw-bold mt-2">Old Password</p>
+                <input type="text" name="changepass" class="form-control" required>
+                <p class="fs-5 fw-bold mt-2">New Password</p>
+                <input type="text" name="password" class="form-control" required>
+                <p class="fs-5 fw-bold mt-2">Confirm Password</p>
+                <input type="password" name="confpass" id="" class="form-control" required>
+                <input type="submit"  name="" class="btn form-control mt-4"  style="font-size:20px;color: white; background-color: #221f33;" value="Change Password" id="">
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+
+    </div>
+</div>  
+{% endblock %}

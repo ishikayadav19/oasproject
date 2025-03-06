@@ -1,0 +1,32 @@
+{% extends 'studentlayout.html' %}
+{% load static %}
+{% block student %}
+<div class="container-fluid " style="min-height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Final Submission</h1></div>
+            <div class="row mt-5 mx-auto">
+                <div class="col-sm-4 mx-auto text-center">
+                    <img src="{{stu.pic.url}}" class="img-fluid">
+                </div>
+                <div class="col-sm-8 ps-5">
+                    <p class="fs-5 ">Name :  <span class="fw-bold ps-3 ">{{stu.name}}</span></p> <br>
+                    <p class="fs-5">Session :  <span class="fw-bold ps-3 ">{{stu.session}}</span></p><br>
+                    <p class="fs-5">Course :  <span class="fw-bold ps-3 ">{{stu.course}}</span></p><br>
+                    <p class="fs-5">Course Fees :  <span class="fw-bold ps-3 "> &#8377 {{stu.fees}}</span></p>    
+                </div>
+            </div><hr>
+    <div class="row">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3 class="text-center mt-3  fw-bold">Upload Fees Receipt Here</h3>
+            <div class="col-12">
+                <label for="ss" class="form-label fs-5 "> Upload Payment Receipt</label>
+                <input type="file" name="fees_ss" class="form-control shadow" required>
+            </div>
+            <div class="col-12 text-center mt-4 mb-3 mx-auto ">
+                <button class="btn btn-lg" style="background-color:#221f33;color:white;" type="submit"> Final Submission</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+{% endblock %}

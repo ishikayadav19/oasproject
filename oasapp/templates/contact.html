@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="row p-2"  style="margin-bottom: -50px; background-image: url({% static 'images/login wallpaper.jpg' %}); background-repeat: no-repeat; background-size: cover;">
+    <div class="col-sm-10 mx-auto" >
+      <div class="row mb-5">
+        {% if msg %}
+        <div class="col-sm-12">
+          <div class="alert alert-success" role="alert">{{msg}}</div>
+        </div>
+        {% endif %}
+        <div class="card px-3 mx-auto" style="width:600px; background-image:linear-gradient(to right, #bed1ed 0%,#bfebd5) ; ">
+        <div class="text-center" >
+          <h1 class="text-center text-light px-2 py-2 mt-3 rounded-2" style="font-weight: bolder; background:  #052756 ;"> Enquiry </h1>
+          </div>
+          <form class="row " method="post">
+            {% csrf_token %}
+            <div class="col-md-10 mx-auto py-2 ">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="col-md-10 mx-auto py-2">
+              <label for="gender" class="form-label">Gender</label><br>
+              <input type="radio"  class="form-check-input" name="gender" value="male" id=""><f style="font-size: 18px; font-weight: bold;"> Male</f>
+              <input type="radio"  class="form-check-input" name="gender" value ="female" id=""><f style="font-size: 18px; font-weight: bold;"> Female </f>
+            </div>
+            <div class="col-md-10 mx-auto py-2">
+              <label for="address" class="form-label">Address</label>
+              <textarea name="address" id="address" class="form-control"></textarea>
+            </div>
+            <div class="col-md-10 mx-auto py-2">
+              <label for="contactno" class="form-label">Contact No.</label>
+              <input type="number" class="form-control" name="contactno" id="contactno">
+            </div>
+            <div class="col-md-10 mx-auto py-2">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="emailaddress" id="email">
+            </div>
+            <div class="col-md-10 mx-auto py-2">
+              <label for="enquirytext" class="form-label">Enquiry Text</label>
+              <textarea  class="form-control" name="enquirytext" id="enquirytext"> </textarea>
+            </div>
+             <div class="col-md-10 mx-auto py-2 text-center">
+              <button type="submit" class="btn  btn-lg mb-2 mt-2 px-3 py-2 text-light rounded-2 fw-bold" style="background: #052756; ">Submit</button>
+            </div>
+          </form> 
+        </div>
+      
+      </div>
+  </div>
+</div>
+
+{% endblock %}

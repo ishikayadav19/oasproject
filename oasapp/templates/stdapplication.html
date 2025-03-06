@@ -1,0 +1,171 @@
+{% extends 'studentlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    {% block student %}
+    <div class="container-fluid " style="min-height: 100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Application Form</h1></div>
+    <div class="col-md-12 mt-3 " style="border-radius:25px; ">
+    <form action="{% url 'saveinfo' %}" method="post" >
+        {% csrf_token %}
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            <div class="col-sm-6">
+
+                <label for="n " class=" form-label" > Name</label>
+                <input type="text" name="name" value="{{stu.name}}" class="form-control rounded-3 " id="n">
+            </div>
+            <div class="col-sm-6">
+
+                <label for="eadd" class=" form-label" >Email Address </label>
+                <input type="text" name="emailaddress" class="form-control rounded-3 " readonly  value="{{stu.emailaddress}}" id="eadd">
+            </div>
+           
+        </div>
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            <div class="col-sm-6">
+                <label for="fn" class=" form-label" > Father's Name</label>
+                <input type="text" name="fname" value="{{stu.fname}}" class="form-control rounded-3 " id="fn">
+            </div>
+
+            <div class="col-sm-6">
+
+                <label for="mn " class=" form-label" >Mother's Name</label>
+                <input type="text" name="mname"  value="{{stu.mname}}" class="form-control rounded-3 " id="mn">
+            </div>
+            
+        </div>
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            <div class="col-sm-6">
+                <label for="cn" class=" form-label" > Contact no. </label>
+                <input type="text" name="contactno" value="{{stu.contactno}}"  class="form-control rounded-3 " id="cn">
+            </div>
+            <div class="col-sm-6">
+                <label for="gender" class="form-label"> Gender </label>
+                <input type="text" name="gender" value="{{stu.gender}}" class="form-control rounded-3">
+            </div>
+        </div>
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            
+            <div class="col-sm-6">
+                <label for="session" class=" form-label" > Session</label>
+                <select name="session" class="form-select" id="">
+                    {% if stu.session %}
+                    <option value="{{stu.session}}">{{stu.session}}</option>
+                    {% endif %}
+                    <option value="">-----Select Session-----</option>
+                    {% for s in ses %}
+                    <option value="{{s.session}}">{{s.session}}</option>
+                    {% endfor %}
+                </select>
+
+            </div>
+          
+            
+            <div class="col-sm-6">
+                <label for="course" class=" form-label" > Course</label>
+                <select name="course" class="form-select" id="">
+                    {% if stu.course  %}
+                    <option value="{{stu.course}}">{{stu.course}}</option>
+                    {% endif %}
+                    
+                    <option value="">-----Select Course-----</option>
+                    {% for c in course %}
+                    <option value="{{c.course_name}}">{{c.course_name}}</option>
+                    {% endfor %}
+                </select>
+
+
+            </div>
+          
+        </div>
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            <div class="col-sm-12">
+                <label for="address" class=" form-label" > Address </label>
+                <textarea style="width: 100%; " value="{{stu.address}}" name="address" id="" class="form-control rounded-3">{{stu.address}}</textarea>
+            </div>
+          
+
+        </div>
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            
+            <div class="col-sm-6">
+
+                <label for="dob " class=" form-label" > Date Of Birth </label>
+                <input type="date" name="dob" value="{{stu.dob}}" class="form-control rounder-3" id="dob">
+
+            </div>
+            <div class="col-sm-6">
+
+                <label for="aadhar" class=" form-label" > Aadhar No.</label>
+                <input type="text" name="aadharno"  value="{{stu.aadharno}}" class="form-control rounder-3" id="aadharno">
+
+            </div>
+           
+            
+        </div>
+
+        <div class="row" style="font-size: 20px; font-weight: bold; ">
+            
+            <div class="col-sm-6">
+                <label for="hs_percent" class=" form-label" > High School Precentage</label>
+                <input type="text" name="hs_percent" value="{{stu.hs_percent}}" class="form-control rounder-3" id="hs">
+
+            </div>
+            <div class="col-sm-6">
+                <label for="inter_percent" class=" form-label" > Secondary School Precentage</label>
+                <input type="text" name="inter_percent" value="{{stu.inter_percent}}" class="form-control rounder-3" id="inter_percent">
+
+            </div>
+        </div>
+        <div class="text-center mt-4 p-3 ">
+            <button type="submit" class="btn btn-lg" style="background-color:#221f33;color:white;"> Submit</button>
+        </div>
+    </form>
+
+    <hr>
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Upload Documents</h1></div>
+
+    <form action="{% url 'uploaddoc' %}" method="post" class="p-3"  enctype="multipart/form-data"  style="font-size:20px; font-weight: bolder;">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="p" class="form-label">Upload Passport size Photograph</label>
+                <input type="file" name="pic"  id="p" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="a" class="form-label">Upload Aadhar card</label>
+                <input type="file" name="aadharpic" id="a" class="form-control" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="hs" class="form-label">Upload High School Marksheet</label>
+                <input type="file" name="hs_marksheet" id="hs" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="i" class="form-label">Upload Intermediate Marksheet </label>
+                <input type="file" name="inter_marksheet" id="i" class="form-control" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="s" class="form-label">Upload Signature</label>
+                <input type="file" name="sign" id="s" class="form-control" required>
+            </div>
+        </div>
+        <div class="text-center mt-4 p-3 ">
+            <button type="submit" class="btn btn-lg" style="background-color:#221f33;color:white;">Upload</button>
+        </div>
+
+    </form>
+ </div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

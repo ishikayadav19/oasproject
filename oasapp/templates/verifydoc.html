@@ -1,0 +1,79 @@
+{%  extends 'adminlayout.html' %}
+{% load static %}
+
+
+{% block admin %}
+<div class="container-fluid " style="min-height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Verify Documents</h1></div>
+    
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+        <table class="table  table-bordered text-center">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Emailaddress</th>
+                <th>Contact No.</th>
+                <th>Address</th>
+                <th>Aadhar No.</th>
+                <th>High School %</th>
+                <th>Intermediate %</th>
+                <th>Course</th>
+                <th>Duration</th>
+                <th>Session</th>
+                <th>Pic</th>
+                <th>High school Marksheet</th>
+                <th>Intermediate Marksheet</th>
+                <th>Aadhar</th>
+                <th>Sign</th>
+                <th>Action</th>
+            </tr>
+            {% for s in students %}
+            <tr>
+                <td>{{s.sid}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.dob}}</td>
+                <td>{{s.emailaddress}}</td>
+                <td>{{s.contactno}}</td>
+                <td>{{s.address}}</td>
+                <td>{{s.aadharno}}</td>
+                <td>{{s.hs_percent}}</td>
+                <td>{{s.inter_percent}}</td>
+                <td>{{s.course}}</td>
+                <td>{{s.course_duration}}</td>
+                <td>{{s.session}}</td>
+                <td>
+                    <img src="{{s.pic.url}}" width="120px" alt="">
+                </td>
+                <td>
+                    <img src="{{s.hs_marksheet.url}}" width="120px" alt="">
+                </td>
+                <td>
+                    <img src="{{s.inter_marksheet.url}}" width="120px" alt="">
+                </td>
+                <td>
+                    <img src="{{s.aadharpic.url}}" width="120px" height="100px" alt="">
+                </td>
+                <td>
+                    <img src="{{s.sign.url}}" width="120px" height="100px" alt="">
+                </td>
+                <td>
+                    <a href="{% url 'verifystu' sid=s.sid %}" class="btn btn-success"> Verify</a>
+                </td>
+
+
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+ 
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'studentlayout.html' %}
+{% load static %}
+{% block student%}
+
+<div class="container-fluid " style="min-height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Welcome Student</h1></div>
+    {% if asign %}
+    <div class="row px-5 py-3 mt-4">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 ">
+            <div class="card py-5 text-center shadow h-100" style="background-color: #221f33; color: white ;box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="col-sm-4 mx-auto py-3">
+                <img src="{{stu.pic.url}}" style=" border: 2px solid white;" alt="" height="200px;">
+
+                </div>
+                <div class="col sm-6 mt-3 mx-auto" style="text-align: justify;">
+                <p class="fs-5 ps-5">Name:<span class="fw-bold ps-3">{{stu.name}}</span></p>
+                <p class="fs-5 ps-5">Session:<span class="fw-bold ps-3">{{stu.session}}</span></p>
+                <p class="fs-5 ps-5">Course:<span class="fw-bold ps-3">{{stu.course}}</span></p>
+                <p class="fs-5 ps-5">Duration:<span class="fw-bold ps-3">{{stu.course_duration}}</span></p>
+
+              
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    
+           <!-- <div class="row mt-5 mx-auto">
+                <div class="col-md-3  text-center">
+                    <img src="{{stu.pic.url}}" alt="" height="200px;">
+                     </div>
+                <div class="col-md-9 ">
+                    <p class="fs-5">Name:<span class="fw-bold ps-3">{{stu.name}}</span></p>
+                    <p class="fs-5">Session:<span class="fw-bold ps-3">{{stu.session}}</span></p>
+                    <p class="fs-5">Course:<span class="fw-bold ps-3">{{stu.course}}</span></p>
+                    
+    
+                </div>
+            </div>-->
+
+    {% endif %}
+    {% if not asign%}
+<h4 class="text-center"> You are not enrolled in any course yet!!</h4>
+<h5 class="text-center">Wait for admin Aprroval......</h5>
+
+{% endif %}
+</div>
+{% endblock %}

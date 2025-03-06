@@ -1,0 +1,50 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Enquiry</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body >
+    {% block admin%}
+    <div class="container-fluid " style="height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Enquiry Details</h1></div>
+    <table class="table table-bordered border border-2  shadow" >
+        <thead>
+            <tr class="text-dark" style="font-size: 22px;">
+                <th style="background-color:  #221f33; color: white;">ID</th>
+                <th style="background-color:  #221f33; color: white;">Name</th>
+                <th style="background-color:  #221f33; color: white;">Gender</th>
+                <th style="background-color:  #221f33; color: white;">Address</th>
+                <th style="background-color:  #221f33; color: white;">Contact number</th>
+                <th style="background-color:  #221f33; color: white;">Email</th>
+                <th style="background-color:  #221f33; color: white;">Enquiry</th>
+                <th style="background-color:  #221f33; color: white;">Enquiry date</th>
+                <th style="background-color:  #221f33; color: white;">Action</th>
+            </tr>
+        </thead>
+        <tbody >
+           {% for i in Show %} 
+           <tr style="font-size: 18px;">
+            <td  >{{i.id}}</td>
+            <td  >{{i.name}}</td>
+            <td  >{{i.gender}}</td>
+            <td  >{{i.address}}</td>
+            <td  >{{i.contactno}}</td>
+            <td  >{{i.emailaddress}}</td>
+            <td  >{{i.enquirytext}}</td>
+            <td  >{{i.enquirydate}}</td>
+            <td  >
+                <a href="{% url 'delenq' id=i.id %}" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+           </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+</div>
+    {% endblock %}
+</body>
+</html>

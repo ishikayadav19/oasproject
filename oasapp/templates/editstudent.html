@@ -1,0 +1,47 @@
+{%  extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block admin %}
+
+    <div class="container-fluid " style="height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Edit Student Details</h1></div>
+        
+        
+            <form action="{% url 'updatestudent' %}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-6 mx-auto">
+                    <label style="font-size: 22px; font-weight: bold;">ID</label>
+                    <input type="text"  name="sid" class="form-control border-dark rounded-0 " readonly value="{{std.sid}}" id="">
+                   <!--  <label style="font-size: 22px; font-weight: bold; margin-right: 25px; margin-top: 10px;"> Session </label>
+
+                    <input type="text"  name="course_Session" class="form-control border-dark rounded-0 " readonly value="{{ba.course_Session}}" id="">-->
+                    
+                    <label style="font-size: 22px; font-weight: bold; margin-top: 10px;">Edit Name</label>
+                    <input type="text" placeholder="" name="name" value="{{std.name}}" required class="form-control border-dark rounded-0 " id=""/>
+                    <label style="font-size: 22px; font-weight: bold; margin-top: 10px;">Edit Email</label>
+                    <input type="text" placeholder="" required name="emailaddress" value="{{std.emailaddress}}" class="form-control border-dark rounded-0 " id=""/>
+                    <label style="font-size: 22px; font-weight: bold; margin-top: 10px;">Edit Contact No. </label>
+                    <input type="text" placeholder="" required name="contactno" value="{{std.contactno}}" class="form-control border-dark rounded-0 " id=""/>
+                    <label style="font-size: 22px; font-weight: bold; margin-top: 10px;">Edit Gender</label>
+                    <input type="text" placeholder="" required name="gender" value="{{std.gender}}" class="form-control border-dark rounded-0 " id=""/>
+                 
+                 
+                    <br>
+                  <div class="text-center">  <input type="submit" value="Update" class="btn btn-lg text-center" style="background-color: #221f33; color: white;"/> </div>
+     
+
+                 </form>
+    
+    
+    
+        </div>
+        
+    {% endblock %}
+</body>
+</html>

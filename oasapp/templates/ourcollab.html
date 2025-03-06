@@ -1,0 +1,36 @@
+{%  extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>collaboration</title>
+</head>
+<body>
+    
+    {% block body %}
+    
+    <div class="row " style=" background-color: black;" >
+        <div class="row mx-auto" style=" height:250px; background-image: url({% static 'images/org.jpg' %}); background-repeat: no-repeat; background-size:cover ; opacity: 60%;">   
+        </div>
+        <h2 style="color: white; margin-top: -150px; font-size: 50px; font-weight: bolder; opacity: 100%;" class="text-center"> Our Collaborators</h2>
+        <div class="row mx-auto" style=" background-color: white">
+            <div class="row text-center mx-auto " style="height: 200px;">
+                <div class="col-sm-2 mx-auto"><img src="{% static 'images/collab1.jpg' %}" height="300px"></div>
+                <div class="col-sm-2 mx-auto"><img src="{% static 'images/collab2.jpg' %}" height="300px"></div>
+                <div class="col-sm-2 mx-auto"><img src="{% static 'images/collab3.jpeg' %}" alt="" height="300px"></div>
+                <div class="col-sm-2 mx-auto"><img src="{% static 'images/collab4.jpg' %}" alt="" height="300px"></div>
+            </div>
+
+
+        </div>
+{% endblock %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+
+  AOS.init();
+
+</script>         
+        </body>
+        </html>

@@ -1,0 +1,74 @@
+{% extends 'adminlayout.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admindash</title>
+</head>
+<body>
+    
+
+
+{% block admin %}
+<div class="container-fluid " style="height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Admin Dashboard</h1></div>
+
+    <div class="row px-5 py-3 mt-4">
+        <div class="col-md-4 ">
+            <div class="card py-5 text-center shadow h-100" style="background-image: linear-gradient(-225deg, #09827c 0%, #050715 100%); color: white;">
+                <a href="{% url 'viewstudent' %}" style="text-decoration: none; color: white;">
+                <h1><i class="fa-solid fa-user-graduate py-3" style="color:white;"></i>&nbsp  {{sc}}+</h1>
+                <p class="fs-5 fw-bold">Students</p></a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card py-5 text-center shadow h-100 dashadmin" style="background-image: linear-gradient(-225deg, #09827c 0%, #050715 100%); color: white;">
+                <a href="{% url 'viewcourse' %}" style="text-decoration: none; color: white;">
+                <h1><i class="fa-solid fa-pen-to-square py-3" style="color:white;"></i>&nbsp  {{cc}}+</h1>
+                <p class="fs-5 fw-bold">Courses</p></a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card py-5 text-center shadow h-100 dashadmin" style="background-image: linear-gradient(-225deg, #09827c 0%, #050715 100%); color: white;">
+                <a href="{% url 'showenquiry' %}" style="text-decoration: none; color: white;">
+                <h1><i class="fa-solid fa-phone-volume py-3" style="color:white;"></i>&nbsp  {{ec}}+</h1>
+                <p class="fs-5 fw-bold">Enquires</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="row px-5 py-3 mt-4">
+        <div class="col-md-4">
+            <div class="card py-5 text-center shadow h-100 " id="verify" style="background-image: linear-gradient(-225deg, #09827c 0%, #050715 100%); color: white;">
+                <a href="{% url 'verifydoc' %}" style="text-decoration: none; color: white;">
+                <h1><i class="fa-solid fa-hourglass-half py-3" style="color:white;"></i>&nbsp  {{dp}}</h1>
+                <p class="fs-5 fw-bold "> Document Verification <br> Pending </p></a>
+            </div>
+           
+        </div>
+
+        <div class="col-md-4 ">
+            <div class="card py-5 text-center shadow h-100 dashadmin" style="background-image: linear-gradient(-225deg, #09827c 0%, #050715 100%); color: white;">
+                <a href="{% url 'finalverification' %}" style="text-decoration: none; color: white;">
+                <h1><i class="fa-brands fa-google-pay  py-3" style="color:white; font-size:50px;"></i>&nbsp  {{fc}}+</h1>
+                <p class="fs-5 fw-bold">Fees Verification <br> Pending</p></a>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card py-5 text-center shadow h-100 dashadmin" style="background-image: linear-gradient(-225deg, #09827c 0%, #050715 100%); color: white;">
+                <a href="{% url 'finalstudents' %}" style="text-decoration: none; color: white;">
+                <h1><i class="fa-solid fa-circle-check py-3" style="color:white;"></i>&nbsp  {{apc}}+</h1>
+                <p class="fs-5 fw-bold">Approved Students</p></a>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+</div>
+{% endblock %}
+
+</body>
+</html>

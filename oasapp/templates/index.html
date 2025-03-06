@@ -1,0 +1,509 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1
+{
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        opacity: 0.6;
+        transition: 0.3s;
+        margin-top: -500px; 
+        margin-left: -130px; 
+        width:70%; 
+        background-color:#052756;
+      
+}
+
+.box1:hover
+{
+     opacity: 1;
+}
+.cover
+{
+  padding-bottom:10px; 
+  margin: auto; 
+  border: 2px solid #093028;
+  width: 80%;
+  margin-left: 40%;
+  text-align: center;
+  color:white;
+  background: #093028;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+div .agri
+{
+  text-decoration: none;
+  color: black;
+  font-weight:bold ;
+}
+
+
+  </style>
+</head>
+<body>
+  
+{% load static %}
+
+<div class="row">
+  <div class="col-sm-12">
+     <!--slider start-->
+     <div class="row mt-0 ">
+      <div id="carouselExample" class="carousel slide px-0">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+
+              <img src="{% static 'images/slider1.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption ">
+
+                <div class="box text-start p-5 box1 "  >
+
+                    <h5 style="font-size: 50px;" class="fw-bold ">Functional Biotech Park In North India</h5>
+                    <p>
+                        Bio Tech Park is India's top research center, leading in biotechnology and scientific advancements
+                    </p>
+                    <button style="background-color: rgb(8, 169, 8); border:0px; padding: 10px; color:white;" fdprocessedid="2kq88e">
+                        Explore Now
+                    </button>
+                </div>
+            </div>
+              <img id="shape" src="{% static 'images/image.png' %}" alt="">
+            
+
+              </div>
+
+            </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+  </div>
+  <!--slider end-->
+  <!--margin-->
+
+  <div class="row" style="margin-top: -40px;">
+    <div class="col-sm-1 my-0"  ></div>
+    <div class="col-2 sp1 my-0 py-3 ra1" style="z-index: 999; background-color:#052756;" ><h5><span style="  color: white; padding: 10px; ">Announcement</span></h5></div>
+    <div class="col-7 sp2 my-0 py-3 ra2" style="  background: linear-gradient(to right, #237A57, #093028); z-index:999; padding: 6px; ">
+
+      <p class="my-auto"><span style=" color: white; border: 1px solid transparent" class="my-auto"><marquee direction="left" onmouseover="stop()" onmouseout="start()">
+  <img src="{% static 'images/new1.gif' %}" height="15"><span>Join our webinar on Bioinformatics, "Unlocking the Power of Bioinformatics," on September 14th, 2024, at 11:00 AM!</span>  <a href="https://lnkd.in/dARBNc36" style=" color:white" class="fw-bold" target="_blank">Register here</a>
+</marquee></span></p>
+  </div>
+  </div>
+  <!--margin-->
+  <!--cover-->
+  <div class style="margin-top: -140px; padding-top: 160px;">
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-sm-8 mt-2 text-center">
+          <h2 class="mt-5 cover text-center" style="font-size: 40px;" >
+            <span class="border-line1 border-line " >
+                We Cover The 
+            </span>  Whole Spectrum
+        </h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 p-3 pb-0">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- cover-->
+  <!--card start-->
+  <div class="row" style="font-size: 25px;  ">
+    <div class="col-sm-3" style=" margin-left:250px; " >
+      <div class="card " style="width: 15rem;  background: linear-gradient(to right, #237A57, #093028);">
+        <img src="{% static 'images/card1.jpg' %}" height="190px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-size: 20px; color:white; font-weight: bold;"> Clean Environment</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3" style=" margin-left:-120px;">
+      <div class="card" style="width: 15rem;  background: linear-gradient(to right, #237A57, #093028);">
+        <img src="{% static 'images/card2.jpeg' %}" height="190px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-size: 20px; color:white; font-weight: bold;"> Skill Development</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3" style=" margin-left:-120px;">
+      <div class="card" style="width: 15rem;  background: linear-gradient(to right, #237A57, #093028);">
+        <img src="{% static 'images/card3.jpeg' %}" height="190px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-size: 20px; color: white; font-weight: bold;"> Hi-Tech Libraries</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3" style=" margin-left:-120px;">
+      <div class="card" style="width: 16rem;  background: linear-gradient(to right, #237A57, #093028);">
+        <img src="{% static 'images/card4.jpg' %}" height="190px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-size: 20px; color:white; font-weight: bold;"> Modern Infrastructure</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+   <!--card end-->
+   <!--about section-->
+   <div class="row mt-5 " style="  background: linear-gradient(to right, #237A57, #093028); height: 600px;" >
+    <div class="col-sm-6 mt-2 py-2">        
+            <h3 style="font-size:40px; font-weight: bold; color: white;" class="text-center mt-3"><span style="background: #052756;" class="px-3 py-2 rounded-2">About Biotech Park</span></h3>
+            <hr style="color: white;">
+            <p style="font-size:20px; color: white; text-align: justify; padding-bottom: 5px;">
+            Welcome to Bio Tech Lucknow, India’s premier research center dedicated to pioneering advancements in biotechnology. As the nation’s number one research hub, we are at the forefront of innovative scientific research, driving breakthroughs that shape the future of healthcare, agriculture, and environmental sustainability. Our state-of-the-art facilities and world-class laboratories are staffed by a team of distinguished scientists and researchers committed to excellence. At Bio Tech Lucknow, we focus on cutting-edge research in genomics, bioinformatics, and molecular biology, striving to translate scientific discoveries into practical solutions that benefit society. We pride ourselves on fostering a collaborative environment that encourages creativity and innovation. Our partnerships with leading academic institutions, industry leaders, and government agencies enable us to stay ahead in the rapidly evolving field of biotechnology. Join us in our mission to push the boundaries of science and improve the quality of life through groundbreaking research and sustainable technological advancements. Bio Tech Lucknow is not just a research center; it is a beacon of progress and a catalyst for change in the biotech landscape of India.
+    
+          </p>
+        </div>
+      <div class="col-sm-6 mt-5" >        
+        <iframe width="90%" class="rop" height="500" src="https://www.youtube.com/embed/n4XnjmavROw?si=xyklZkVLgmroA0bU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+    </div>
+   </div>
+  <!--about section end-->
+  <!--our mentors start-->
+  <div class="container mt-5">
+    <div class="row mt-4">
+        <div>
+            <div class="container">
+                <div class="col-sm-12 text-center">
+                    <span style="font-size: 40px; font-weight: 500; background: #052756; color: white; " class="shadow rounded-2 py-2 px-3 ">
+                        Our Mentors
+
+
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-4 mt-4 g-4">
+                <div class="col-md-3  tm hello w501 w100" id="ment">
+                    <div class="card mentors  h-100 shadow rounded-0 p-2" style=" background: linear-gradient(to right, #237A57, #093028);"  >
+                        <img src="{% static 'images/mentor1.jpg' %}" class="card-img-top rounded-circle p-2 h-100" height="280px" style="border: 1px solid white;" alt="...">
+                        <div class="card-body mentors-content">
+                            <h5 class="card-title mentors-title text-center fw-bold" style="color:white;">Smt. Anandiben Patel</h5>
+                            <p class="card-text mentors-text text-center fw-bold" style="color:whitesmoke;">Hon’ble Governor <br>Uttar Pradesh</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 tm hello w501 w100" id="ment">
+                    <div class="card mentors h-100 shadow rounded-0 p-2" style=" background: linear-gradient(to right, #237A57, #093028);" >
+                        <img src="{% static 'images/mentor2.jpg' %}" class="card-img-top rounded-circle p-2 h-100" height="280px" style="border: 1px solid white;" alt="...">
+                        <div class="card-body mentors-content">
+                            <h5 class="card-title mentors-title text-center fw-bold" style="color:white"> Shri Yogi Adityanath</h5>
+                            <p class="card-text mentors-text text-center fw-bold" style="color:whitesmoke;">Hon’ble Chief Minister<br>Uttar Pradesh</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 tm hello w501w100" id="ment">
+                    <div class="card mentors h-100 shadow rounded-0 p-2" style=" background: linear-gradient(to right, #237A57, #093028);">
+                        <img src="{% static 'images/mentor3.jpg' %}" class="card-img-top rounded-circle p-2 h-100" height="280px" style="border: 1px solid white;" alt="...">
+                        <div class="card-body mentors-content">
+                            <h5 class="card-title mentors-title text-center fw-bold" style="color:white"> Shri Anil Kumar</h5>
+                            <p class="card-text mentors-text text-center fw-bold" style="color:whitesmoke;">Hon’ble Cabinet Minister<br>DST, GoUP</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 tm hello w501 w100" id="ment" >
+
+                    <div class="card mentors h-100 shadow rounded-0 p-2" style=" background: linear-gradient(to right, #237A57, #093028);">
+                        <img src="{% static 'images/mentor4.jpg' %}" class="card-img-top rounded-circle p-2 h-100" style="border: 1px solid white;" height="280px" alt="...">
+                        <div class="card-body mentors-content">
+                            <h5 class="card-title mentors-title text-center fw-bold" style="color:white"> Prof. J. P. Pandey</h5>
+                            <p class="card-text mentors-text text-center fw-bold" style="color:whitesmoke;">CEO <br>Biotech Park, Lucknow</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!--our mentors end-->
+  <!--agriculture-->
+  <div class="row dd">
+    <div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-12 mt-5 mb-3">
+                    <h1 class="asi"><span style="font-size: 40px; font-weight: 500; background: #052756; color: white; " class="shadow rounded-2 py-2 px-3 agriculture ">Agriculture Services Industry</span></h1>
+
+
+                </div>
+                <div class="row ">
+                    <div class="col-md-6 mt-2 w100">
+                        <hr>
+                        <h4 class="text p-2 " ><a href="" class="agri">1. Agriculture &amp; Health</a></h4>
+                        <hr>
+                        <h4 class="text p-2 " ><a href="" class="agri">2. Chemical &amp; Metrical</a></h4>
+                        <hr>
+                        <h4 class="text p-2" ><a href="" class="agri">3. Soil Analysis</a></h4>
+                        <hr>
+                        <h4 class="text p-2" ><a href="" class="agri">4. Soil Tillage</a></h4>
+                        <hr>
+                    </div>
+                    <div class="col-md-6 Services">
+                      <img src="{% static 'images/ag1.jpeg' %}" height="400px" width="600px" alt="" style="margin-top: -50px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!--agriculture-->
+  <!--award-->
+  <div class="row mt-5" style="height: 450px;">
+  <div class="col-sm-12 " style="  background: linear-gradient(to right, #237A57, #093028); color:white; height:auto;">
+ <div class="container-fluid text-center">
+  <div class="row" style="margin-top:35px;">
+  <h2 style="color:white; font-size:50px; "> <span class="px-4 rounded-2 fw-bold" style="background: #052756;">Biotech Award Wining Research Project</span></h2>
+  <div class="col-md-2 mt-5 px-3"></div>
+  <div class="col-md-2 mt-5 px-3">
+    <div class="card shadow rounded-circle border-3 ">
+      <img src="{% static 'images/award1.jpg' %}" class="rounded-circle" height="200px" alt="">
+    </div>
+  </div>
+  <div class="col-md-2 mt-5 px-3">
+    <div class="card  shadow rounded-circle border-3">
+      <img src="{% static 'images/award2.jpg' %}" class="rounded-circle" height="200px" alt="">
+    </div>
+  </div>
+  <div class="col-md-2 mt-5 px-3">
+    <div class="card  shadow rounded-circle border-3">
+      <img src="{% static 'images/award3.jpg' %}" class="rounded-circle" height="200px" alt="">
+    </div>
+  </div>
+  <div class="col-md-2 mt-5 px-3">
+    <div class="card  shadow rounded-circle border-3">
+      <img src="{% static 'images/award4.jpg' %}" class="rounded-circle" height="200px" alt="">
+    </div>
+  </div>
+  <div class="col-md-2 mt-5 px-2"></div>
+    </div>
+    </div>
+  </div>
+</div>
+  
+  <!--award-->
+  <!--news-->
+  <div class="row mt-5">
+    <div>
+        <div class="container">
+            <h2 class="mb-4 fw-bold text-center"><span class="border-line1 border-line px-4 py-2 " style=" padding-bottom:5px; background: #052756; color:white">Latest News And Updates </span></h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4 mb-5 mt-4">
+                <div class="col">
+                    <div class="card h-100 shadow" style="  background: linear-gradient(to right, #237A57, #093028); border: 5px solid ;">
+                        <img src="{% static 'images/news1.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text fw-bold" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white;">"On March 13, 2023, a lease was signed for Vatican Shona Agrotech to set up a tissue culture lab at Biotech Park, Lucknow."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow" style="  background: linear-gradient(to right, #237A57, #093028); border: 5px solid ;">
+                        <img src="{% static 'images/news2.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text fw-bold" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">"On February 24, 2023, Awanish Kumar Awasthi visited Biotech Park, Lucknow, and interacted with the incubatees there."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  h-100 shadow" style="  background: linear-gradient(to right, #237A57, #093028); border: 5px solid ;">
+                        <img src="{% static 'images/news3.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text fw-bold" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">"On February 16, 2023, Gene to Protein launched 'GreenRTM dye' and qPCR Mastermix at Biotech Park, inaugurated by Alok Kumar."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  h-100 shadow" style="  background: linear-gradient(to right, #237A57, #093028); border: 5px solid ;">
+                        <img src="{% static 'images/news4.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text fw-bold" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">"A two-day workshop on "Production &amp; Cultivation of Cordyceps militaris" was organized from April 22 to 24, 2022."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+  <!--news-->
+  <!--read more-->
+  <div class="col-sm-12 mb-5 text-center">
+    <button style="height: 45px; width: 200px; background: #052756; color:white; font-weight: bold; border:0px;" class="btn btn-lg shadow" fdprocessedid="2qk1s6">Read More</button>
+</div>
+<!--read more-->
+<!--training-->
+<div class="row mt-5" style="height: 500px;">
+  <div class="col-sm-12 " style="
+ background: linear-gradient(to right, #237A57, #093028); color:white; height:auto;">
+ <div class="container-fluid text-center">
+  <div class="row" style="margin-top:35px;">
+    <h2 style="font-size: 45px; margin-bottom: 20px; font-weight: bolder; color: white;"> <span style="background: #052756;" class="px-3 py-2 rounded-2">Training Program For Students</span></h2>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-3 shadow" style="height: 350px;">
+            <img src="{% static 'images/training1.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text" style=" font-size: 25px; font-weight: bolder;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Industrial Training</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 shadow" style="height: 350px;">
+            <img src="{% static 'images/training2.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text" style=" font-size: 25px; font-weight: bolder;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Biodiesel-Production Testing</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 shadow" style="height: 350px;">
+            <img src="{% static 'images/training3.jpg' %}" height="200vh" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text" style=" font-size: 25px; font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Bioinformatics</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 shadow" style="height: 350px;">
+            <img src="{% static 'images/training4.jpg' %}" height="200vh" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text" style=" font-size: 25px; font-weight: bolder; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Industrial Biotechnology</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+</div>
+</div>
+</div>
+
+<!--training-->
+<!--clients-->
+<div class="row mt-5" style="height:auto;">
+  <div class="col-sm-12 " style=" height:auto;">
+ <div class="container-fluid text-center">
+  <div class="row" style="margin-top:35px;">
+    <h2 style="font-size: 50px; font-weight: bolder; color: white; margin-bottom: 50px;"><span style="background: #052756;" class="px-3 py-2 rounded-2">Our Clients</h2>
+    <div class="col-sm-2 "></div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 h-100 shadow">
+            <img src="{% static 'images/clients1.jpg' %}" height="200vh" class="card-img-top" alt="...">
+            
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 h-100 shadow">
+            <img src="{% static 'images/clients2.jpg' %}" height="200vh" class="card-img-top" alt="...">
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 h-100 shadow">
+            <img src="{% static 'images/clients3.png' %}" height="200vh" class="card-img-top" alt="...">
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-2">
+      <div class="col">
+        <div class="card border-2 h-100 shadow">
+            <img src="{% static 'images/clients4.png' %}" height="200vh" class="card-img-top" alt="...">
+        </div>
+    </div>
+
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+</div>
+</div>
+<div class="col-sm-12" style=" height:auto;">
+  <div class="container-fluid text-center">
+    <div class="row" style="margin-top:35px;">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2">
+        <div class="col">
+          <div class="card border-2 h-100 shadow">
+              <img src="{% static 'images/clients5.jpeg' %}" height="200vh" class="card-img-top" alt="...">
+          </div>
+      </div>
+  
+      </div>
+      <div class="col-sm-2">
+        <div class="col">
+          <div class="card border-2 h-100 shadow">
+              <img src="{% static 'images/clients6.jpg' %}" height="200vh" class="card-img-top" alt="...">
+          </div>
+      </div>
+  
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-2"></div>
+  </div>
+  </div>
+  
+</div>
+</div>
+
+<!--clients-->
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}
+</body>
+</html>

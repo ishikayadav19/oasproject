@@ -1,0 +1,35 @@
+{%  extends 'adminlayout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block admin %}
+
+    <div class="container-fluid " style="height:100vh; background-color: rgb(169, 245, 226);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="row " style="width: 80%; margin: auto; height: 80px;"><h1 class="text-center mt-2 p-2 text-white" style="font-size:40px; font-weight: bolder; background-color:#221f33;"> Edit Session</h1></div>
+        
+        
+            <form action="{% url 'updatesession' %}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-6 mx-auto ">
+                    <label style="font-size: 22px; font-weight: bold;">ID</label>
+                    <input type="text" placeholder="ex. 2023-2024" name="id" class="form-control border-dark rounded-0 " readonly value="{{ab.id}}" id="">
+                    <label style="font-size: 22px; font-weight: bold;">Edit Session</label>
+                    <input type="text" placeholder="ex. 2023-2024" name="session" class="form-control border-dark rounded-0 " value="{{ab.session}}" required id="">
+                </div>
+                <div class="col-sm-12 mt-3 text-center">
+                    <input type="submit" style="font-size:20px;color: white; background-color: #221f33;" class="btn btn-lg"  value="Update">
+                </div>
+            </form>
+    
+    
+    
+        </div>
+        
+    {% endblock %}
+</body>
+</html>
