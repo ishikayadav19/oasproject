@@ -16,7 +16,7 @@ import os
 
 SECRET_KEY = os.environ.get('django-insecure-)z^195p8r+nn5v++ao89=8vv5i)*f2pe-#x+#v93t2o#vb-7*u', 'unsafe-default')
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.onrender.com').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'https://oas-b5zm.onrender.com').split(',')
 
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'ishikayadav19125@gmail.com')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'yshz fuch enev ykmo')
