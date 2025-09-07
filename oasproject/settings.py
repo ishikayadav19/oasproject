@@ -13,8 +13,15 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os 
 
-EMAIL_HOST_USER = os.getenv('ishikayadav19125@gmail.com')
-EMAIL_HOST_PASSWORD = os.getenv('yshz fuch enev ykmo')
+
+SECRET_KEY = os.environ.get('django-insecure-)z^195p8r+nn5v++ao89=8vv5i)*f2pe-#x+#v93t2o#vb-7*u', 'unsafe-default')
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.onrender.com').split(',')
+
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'ishikayadav19125@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'yshz fuch enev ykmo')
+# EMAIL_HOST_USER = os.getenv('ishikayadav19125@gmail.com')
+# EMAIL_HOST_PASSWORD = os.getenv('yshz fuch enev ykmo')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,12 +31,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)z^195p8r+nn5v++ao89=8vv5i)*f2pe-#x+#v93t2o#vb-7*u'
+# SECRET_KEY = 'django-insecure-)z^195p8r+nn5v++ao89=8vv5i)*f2pe-#x+#v93t2o#vb-7*u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
-ALLOWED_HOSTS = ['*']
+# DEBUG = False
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
